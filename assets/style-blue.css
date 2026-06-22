@@ -2927,7 +2927,7 @@ details,
 }
 
 .form-message.success{
-  color:#22c55e;
+  color:var(--accent);
 }
 
 .form-message.error{
