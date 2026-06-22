@@ -409,7 +409,7 @@ h6 {
   font-weight: 600 !important;
   line-height: 1.2 !important;
   white-space: nowrap !important;
-  text-align: center !important;
+  text-align: start !important;
 }
 
 .site-navbar .site-navbar__dropdown a:hover,

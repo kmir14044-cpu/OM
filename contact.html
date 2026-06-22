@@ -39,9 +39,9 @@
               stroke-linejoin="round" />
           </svg></button>
         <div class="site-navbar__dropdown">
-          <a href="services.html#ai">AI Automation</a>
-          <a href="services.html#ux">Premium UI/UX Design</a>
+                   <a href="services.html#ux">Premium UI/UX Design</a>
           <a href="services.html#ugc">UGC Videos</a>
+          <a href="services.html#ai">AI Automation</a>
           <a href="services.html#build">Build & Integrate</a>
         </div>
       </div>
@@ -71,7 +71,7 @@
           <p class="eyebrow dark">Contact Us</p>
           <h2>Let's Build Something That Works Without You In The Middle.</h2>
         </div>
-        <form class="contact-form" action="mailto:info@outsourcemantra.com" method="post" enctype="text/plain">
+        <!-- <form class="contact-form" action="mailto:info@outsourcemantra.com" method="post" enctype="text/plain">
           <h3>Drop Your Message</h3>
           <label>Full Name <input name="name" autocomplete="name" required /></label>
           <div class="contact-form__row">
@@ -80,7 +80,70 @@
           </div>
           <label>Message <textarea name="message" rows="5" required></textarea></label>
           <button class="button button--primary" type="submit">Get in Touch</button>
-        </form>
+        </form> -->
+        <form class="contact-form"
+      action="https://api.web3forms.com/submit"
+      method="POST">
+
+  <!-- Web3Forms Config -->
+  <input type="hidden" name="access_key" value="0a9c3c6a-f2b9-4e37-b3d3-76eaf17f47e5">
+  <input type="hidden" name="subject" value="New Lead - Outsource Mantra">
+  <input type="hidden" name="from_name" value="Outsource Mantra Website">
+
+  <!-- Optional Redirect -->
+  <!--
+  <input type="hidden" name="redirect"
+         value="https://outsourcemantra.com/thank-you.html">
+  -->
+
+  <h3>Drop Your Message</h3>
+
+  <label>
+    Full Name
+    <input
+      type="text"
+      name="name"
+      autocomplete="name"
+      required>
+  </label>
+
+  <div class="contact-form__row">
+
+    <label>
+      Email
+      <input
+        type="email"
+        name="email"
+        autocomplete="email"
+        required>
+    </label>
+
+    <label>
+      Phone Number
+      <input
+        type="tel"
+        name="phone"
+        autocomplete="tel"
+        required>
+    </label>
+
+  </div>
+
+  <label>
+    Message
+    <textarea
+      name="message"
+      rows="5"
+      required></textarea>
+  </label>
+
+  <button
+    class="button button--primary"
+    type="submit">
+    Get in Touch
+  </button>
+
+</form>
       </div>
     </section>
   </main>
@@ -100,8 +163,7 @@
       <div class="site-footer__column">
         <h4>Office</h4>
         <p>
-          Tawau, Sabah<br>
-          Malaysia
+          Bunglow F68 Defence View Phase 2.<br> Karachi, Pakistan
         </p>
         <br>
         <h4>Contact</h4>
