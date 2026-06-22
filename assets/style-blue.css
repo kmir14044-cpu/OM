@@ -2919,3 +2919,17 @@ details,
   color:#0057FF !important;
   transform:translateY(-2px);
 }
+.form-message{
+  margin-top:16px;
+  font-size:14px;
+  font-weight:500;
+  display:none;
+}
+
+.form-message.success{
+  color:#22c55e;
+}
+
+.form-message.error{
+  color:#ef4444;
+}

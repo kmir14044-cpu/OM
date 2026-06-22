@@ -172,3 +172,61 @@ document.querySelectorAll(".newsletter").forEach((form) => {
     }, 1600);
   });
 });
+
+const contactForm = document.getElementById('contactForm');
+
+if(contactForm){
+
+  contactForm.addEventListener('submit', async function(e){
+
+    e.preventDefault();
+
+    const formMessage = document.getElementById('formMessage');
+
+    formMessage.style.display = 'none';
+    formMessage.className = 'form-message';
+
+    const formData = new FormData(contactForm);
+
+    try {
+
+      const response = await fetch(
+        'https://api.web3forms.com/submit',
+        {
+          method: 'POST',
+          body: formData
+        }
+      );
+
+      const result = await response.json();
+
+      if(result.success){
+
+        formMessage.style.display = 'block';
+        formMessage.classList.add('success');
+        formMessage.innerHTML =
+          '✓ Thank you! Your message has been sent successfully.';
+
+        contactForm.reset();
+
+      } else {
+
+        formMessage.style.display = 'block';
+        formMessage.classList.add('error');
+        formMessage.innerHTML =
+          'Something went wrong. Please try again.';
+
+      }
+
+    } catch(error){
+
+      formMessage.style.display = 'block';
+      formMessage.classList.add('error');
+      formMessage.innerHTML =
+        'Network error. Please try again.';
+
+    }
+
+  });
+
+}

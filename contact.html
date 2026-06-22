@@ -81,20 +81,11 @@
           <label>Message <textarea name="message" rows="5" required></textarea></label>
           <button class="button button--primary" type="submit">Get in Touch</button>
         </form> -->
-        <form class="contact-form"
-      action="https://api.web3forms.com/submit"
-      method="POST">
+        <form id="contactForm" class="contact-form">
 
-  <!-- Web3Forms Config -->
-  <input type="hidden" name="access_key" value="0a9c3c6a-f2b9-4e37-b3d3-76eaf17f47e5">
+  <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
   <input type="hidden" name="subject" value="New Lead - Outsource Mantra">
   <input type="hidden" name="from_name" value="Outsource Mantra Website">
-
-  <!-- Optional Redirect -->
-  <!--
-  <input type="hidden" name="redirect"
-         value="https://outsourcemantra.com/thank-you.html">
-  -->
 
   <h3>Drop Your Message</h3>
 
@@ -142,6 +133,8 @@
     type="submit">
     Get in Touch
   </button>
+
+  <p id="formMessage" class="form-message"></p>
 
 </form>
       </div>
