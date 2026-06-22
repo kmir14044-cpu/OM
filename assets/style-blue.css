@@ -976,7 +976,9 @@ i.fa,
   margin: 0 auto;
   padding: clamp(72px, 9vw, 120px) 0;
 }
-
+.contact-section {
+  padding-bottom: 0 !important;
+}
 .break-section h2 span,
 .work-preview h2 span,
 .testimonial-head h2 span {
