@@ -230,3 +230,26 @@ if(contactForm){
   });
 
 }
+function handleMobileContactLink() {
+  const navMenu = document.querySelector('[data-js="site-menu"]');
+  if (!navMenu) return;
+
+  const existingLink = navMenu.querySelector('.js-mobile-contact-link');
+
+  if (window.innerWidth <= 1024) {
+    if (!existingLink) {
+      const contactLink = document.createElement('a');
+      contactLink.href = 'contact.html';
+      contactLink.textContent = 'Get in Touch';
+      contactLink.className = 'js-mobile-contact-link';
+      navMenu.appendChild(contactLink);
+
+      contactLink.addEventListener('click', closeNav);
+    }
+  } else {
+    existingLink?.remove();
+  }
+}
+
+handleMobileContactLink();
+window.addEventListener('resize', handleMobileContactLink);
