@@ -482,79 +482,7 @@ h6 {
   transform: translateX(-50%) translateY(0) !important;
 }
 
-/* Navbar - responsive menubar for laptop and smaller screens */
-@media (max-width: 1366px) {
-  .site-navbar {
-    grid-template-columns: 1fr auto !important;
-    width: calc(100% - 28px) !important;
-    left: 14px !important;
-    right: 14px !important;
-    height: 76px !important;
-    min-height: 76px !important;
-    padding: 0 16px !important;
-    border-radius: 18px !important;
-    background: rgba(5, 5, 5, .92) !important;
-  }
 
-  .site-navbar__cta {
-    display: none !important;
-  }
-
-  .site-navbar__menu {
-    position: fixed !important;
-    top: 86px !important;
-    left: 16px !important;
-    right: 16px !important;
-    display: grid !important;
-    justify-content: stretch !important;
-    gap: 8px !important;
-    padding: 18px !important;
-    background: rgba(5, 5, 5, .98) !important;
-    border: 1px solid var(--line) !important;
-    border-radius: 24px !important;
-    opacity: 0 !important;
-    visibility: hidden !important;
-    transform: translateY(-8px) !important;
-    transition: .2s !important;
-  }
-
-  .is-nav-open .site-navbar__menu {
-    opacity: 1 !important;
-    visibility: visible !important;
-    transform: none !important;
-  }
-
-  .site-navbar__toggle {
-    display: flex;
-    justify-self: end;
-  }
-
-  .site-navbar__menu-group,
-  .site-navbar__menu>a,
-  .site-navbar__dropdown-trigger {
-    width: 100%;
-    justify-content: space-between;
-  }
-
-  .site-navbar__dropdown {
-    position: static !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    transform: none !important;
-    box-shadow: none !important;
-    border: 0 !important;
-    background: #101010 !important;
-    margin-top: 8px !important;
-    display: none !important;
-    width: 100% !important;
-    min-width: 0 !important;
-    pointer-events: auto !important;
-  }
-
-  .site-navbar__menu-group.is-open .site-navbar__dropdown {
-    display: block !important;
-  }
-}
 
 /* Buttons */
 .button {
